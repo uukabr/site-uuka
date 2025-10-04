@@ -173,7 +173,7 @@ export default function MobileMenu() {
             </div>
           </nav>
 
-          {/* CTA no Menu Mobile */}
+          {/* Menu Mobile */}
           <div className="p-4 border-t border-[#F59F23]/20">
             <a
               href="#plataforma"

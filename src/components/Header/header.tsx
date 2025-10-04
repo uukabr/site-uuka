@@ -18,7 +18,7 @@ export default function Header() {
           <DesktopMenu />
         </div>
 
-        {/* Right: CTA button */}
+        {/* Right: button */}
         <a
           href="#plataforma"
           className="rounded-full bg-[#F59F23] text-black px-3 md:px-4 py-2 hover:bg-[#F9c57b] transition text-xs md:text-sm font-bold whitespace-nowrap"
