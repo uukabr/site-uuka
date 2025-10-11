@@ -1,18 +1,15 @@
 'use client'
 
-import { ImageHeroItem } from "@/types/strapi";
-import ImageHeroCarousel from "./image-hero-carousel";
+import AboutContent from "./about-content";
+import TargetAudience from "./target-audience";
+import WhyThisProject from "./why-this-project";
 
-type AboutSectionProps = {
-  items: ImageHeroItem[];
-};
-
-export function AboutSection({ items }: AboutSectionProps) {
+export function AboutSection() {
   return (
-    <section className="pt-[72px] h-screen w-full">
-      <div className="h-[calc(100vh-72px)] w-full overflow-hidden">
-        <ImageHeroCarousel items={items} />
-      </div>
-    </section>
+    <>
+      <AboutContent />
+      <TargetAudience />
+      <WhyThisProject />
+    </>
   );
 }
