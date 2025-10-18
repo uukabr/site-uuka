@@ -17,7 +17,9 @@ export default function DesktopMenu() {
         <NavigationMenuItem>
           <NavigationMenuTrigger
             className="!bg-transparent !text-[#F59F23] hover:!bg-black hover:!text-[#F9c57b] data-[state=open]:!bg-black data-[state=open]:!text-[#F9c57b] focus:!bg-black focus:!text-[#F9c57b] !ring-0 !outline-none font-bold">
-            Somos
+            <a href="#somos" className="text-[#F59F23] hover:text-[#F9c57b] font-bold">
+              Somos
+            </a>
           </NavigationMenuTrigger>
           <NavigationMenuContent
             className="!bg-black !text-[#F59F23] px-6 py-4 min-w-[200px] [&_a]:text-[#F59F23] [&_a:hover]:text-[#F9c57b] !border-0 shadow-none rounded-none">
@@ -58,7 +60,9 @@ export default function DesktopMenu() {
         <NavigationMenuItem>
           <NavigationMenuTrigger
             className="!bg-transparent !text-[#F59F23] hover:!bg-black hover:!text-[#F9c57b] data-[state=open]:!bg-black data-[state=open]:!text-[#F9c57b] focus:!bg-black focus:!text-[#F9c57b] !ring-0 !outline-none font-bold">
-            Metodologia
+            <a href="#metodologia" className="text-[#F59F23] hover:text-[#F9c57b] font-bold">
+              Metodologia
+            </a>
           </NavigationMenuTrigger>
 
           <NavigationMenuContent
@@ -78,7 +82,7 @@ export default function DesktopMenu() {
             </NavigationMenuLink>
 
             <NavigationMenuLink asChild>
-              <a href="#ciclo-virtuo"
+              <a href="#ciclo-virtuoso"
                 className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm hover:font-bold">
                 Ciclo Virtuoso
               </a>
@@ -90,7 +94,9 @@ export default function DesktopMenu() {
         <NavigationMenuItem>
           <NavigationMenuTrigger
             className="!bg-transparent !text-[#F59F23] hover:!bg-black hover:!text-[#F9c57b] data-[state=open]:!bg-black data-[state=open]:!text-[#F9c57b] focus:!bg-black focus:!text-[#F9c57b] !ring-0 !outline-none font-bold">
-            Diretoria
+            <a href="#diretoria" className="text-[#F59F23] hover:text-[#F9c57b] font-bold">
+              Diretoria
+            </a>
           </NavigationMenuTrigger>
 
           <NavigationMenuContent
