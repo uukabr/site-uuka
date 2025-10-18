@@ -103,6 +103,7 @@ export type LeadershipCard = {
   id: number;
   name: string;
   position: string;
+  photo: Image;
 }
 
 export type Leadership = {
