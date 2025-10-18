@@ -62,7 +62,7 @@ export default async function Home() {
         <MissionVisionValuesSection />
         <ScheduleMethodologySection />
         <VirtuousCycleLeadershipSection />
-        <LeadershipSection />
+        <LeadershipSection leadership={leadershipData} />
         <PartnershipsSection />
         <SupportersSection supporters={supportersData} />
         <TestimonialsSection testimonials={testimonialsData} />

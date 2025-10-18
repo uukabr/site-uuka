@@ -42,7 +42,6 @@ export function TestimonialsSection({ testimonials }: TestimonialsSectionProps) 
                 {testimonialCards.map((testimonial) => (
                   <CarouselItem key={testimonial.id} className="basis-full md:basis-1/2 lg:basis-1/3">
                     <div className="bg-[#f9c57b] rounded-2xl p-4 h-80 flex flex-col justify-between">
-                      {/* Estrelas */}
                       <div className="flex gap-1 mb-3">
                         {[...Array(5)].map((_, index) => (
                           <Star
