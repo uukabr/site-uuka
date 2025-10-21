@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function AboutContent() {
   return (
     <section id="somos" className="pt-[72px] h-screen w-full bg-black text-white snap-start">
-      <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16">
+      <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 pb-16">
         <div className="max-w-2xl">
           <p className="text-sm md:text-base lg:text-lg mb-4 leading-relaxed">
             Somos pessoas inconformadas com a dissonância social e racismo estrutural no Brasil.

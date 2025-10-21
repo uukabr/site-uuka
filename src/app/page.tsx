@@ -56,17 +56,37 @@ export default async function Home() {
     <div className="relative">
       <Header />
 
-      <main className="w-full snap-y snap-mandatory overflow-y-scroll h-screen">
-        <HeroSection items={imageHeroItems} />
-        <AboutSection />
-        <MissionVisionValuesSection />
-        <ScheduleMethodologySection />
-        <VirtuousCycleLeadershipSection />
-        <LeadershipSection leadership={leadershipData} />
-        <PartnershipsSection />
-        <SupportersSection supporters={supportersData} />
-        <TestimonialsSection testimonials={testimonialsData} />
-        <ContactSection />
+      <main className="w-full">
+        <div className="section-overlay">
+          <HeroSection items={imageHeroItems} />
+        </div>
+        <div className="section-overlay">
+          <AboutSection />
+        </div>
+        <div className="section-overlay">
+          <MissionVisionValuesSection />
+        </div>
+        <div className="section-overlay">
+          <ScheduleMethodologySection />
+        </div>
+        <div className="section-overlay">
+          <VirtuousCycleLeadershipSection />
+        </div>
+        <div className="section-overlay">
+          <LeadershipSection leadership={leadershipData} />
+        </div>
+        <div className="section-overlay">
+          <PartnershipsSection />
+        </div>
+        <div className="section-overlay">
+          <SupportersSection supporters={supportersData} />
+        </div>
+        <div className="section-overlay">
+          <TestimonialsSection testimonials={testimonialsData} />
+        </div>
+        <div className="section-overlay">
+          <ContactSection />
+        </div>
       </main>
     </div>
   );

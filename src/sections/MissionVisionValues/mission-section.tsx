@@ -3,7 +3,7 @@
 export function MissionSection() {
   return (
     <section id="missao" className="h-full w-full bg-black text-white">
-      <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16">
+      <div className="h-screen w-full flex flex-col justify-between p-6 md:p-12 lg:p-16">
         <div className="max-w-sm">
           <p className="text-sm md:text-base lg:text-lg mb-4 leading-relaxed py-4">
             Impulsionar e empoderar pessoas negras a

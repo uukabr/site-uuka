@@ -13,24 +13,24 @@ export function MissionVisionValuesSection() {
   )
 
   return (
-    <section className="pt-[72px] h-screen w-full snap-start">
-      <div className="h-[calc(100vh-72px)] w-full overflow-hidden">
+    <section className="h-screen w-full snap-start">
+      <div className="h-screen w-full overflow-hidden">
         <Carousel
           opts={{
             align: "start",
             loop: true,
           }}
           plugins={[plugin.current]}
-          className="w-full h-[calc(100vh-72px)]"
+          className="w-full h-screen"
         >
-          <CarouselContent className="h-[calc(100vh-72px)] -ml-0">
-            <CarouselItem className="pl-0 h-[calc(100vh-72px)]">
+          <CarouselContent className="h-screen -ml-0">
+            <CarouselItem className="pl-0 h-screen">
               <MissionSection />
             </CarouselItem>
-            <CarouselItem className="pl-0 h-[calc(100vh-72px)]">
+            <CarouselItem className="pl-0 h-screen">
               <VisionSection />
             </CarouselItem>
-            <CarouselItem className="pl-0 h-[calc(100vh-72px)]">
+            <CarouselItem className="pl-0 h-screen">
               <ValuesSection />
             </CarouselItem>
           </CarouselContent>

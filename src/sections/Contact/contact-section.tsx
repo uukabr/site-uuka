@@ -5,40 +5,43 @@ import { Instagram, Linkedin, Mail } from "lucide-react";
 
 export function ContactSection() {
   return (
-    <section id="contatos" className="pt-[72px] h-screen w-full  bg-[#F59F23] text-black snap-start">
-      <div className="min-h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16 min-h-0">
+    <section
+      id="contatos"
+      className="pt-[72px] w-full bg-[#F59F23] text-black snap-start"
+    >
+      <div className="w-full flex flex-col gap-12 p-6 md:p-12 lg:p-16 pb-8">
+        {/* Conteúdo principal */}
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16">
+          {/* Contatos */}
+          <div className="flex-1 flex flex-col justify-center">
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <Mail className="w-6 h-6 text-black" />
+                <span className="text-sm sm:text-base md:text-lg lg:text-xl text-black">
+                  admin@uuka.com.br
+                </span>
+              </div>
 
-          <div className="flex-1 lg:flex-2 flex flex-col justify-center">
-            <div className="mb-8">
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <Mail className="w-6 h-6 text-black" />
-                  <span className="text-sm sm:text-base md:text-lg lg:text-xl text-black">
-                    admin@uuka.com.br
-                  </span>
-                </div>
+              <div className="flex items-center gap-4">
+                <Instagram className="w-6 h-6 text-black" />
+                <span className="text-sm sm:text-base md:text-lg lg:text-xl text-black">
+                  Instagram
+                </span>
+              </div>
 
-                <div className="flex items-center gap-4">
-                  <Instagram className="w-6 h-6 text-black" />
-                  <span className="text-sm sm:text-base md:text-lg lg:text-xl text-black">
-                    Instagram
-                  </span>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <Linkedin className="w-6 h-6 text-black" />
-                  <span className="text-sm sm:text-base md:text-lg lg:text-xl text-black">
-                    LinkedIn
-                  </span>
-                </div>
+              <div className="flex items-center gap-4">
+                <Linkedin className="w-6 h-6 text-black" />
+                <span className="text-sm sm:text-base md:text-lg lg:text-xl text-black">
+                  LinkedIn
+                </span>
               </div>
             </div>
           </div>
 
+          {/* CTA Voluntário */}
           <div className="w-full lg:flex-1 flex items-start lg:items-center justify-center lg:justify-end">
-            <div className="bg-[#f9c57b] rounded-2xl p-6 sm:p-8 lg:p-10 w-full lg:w-full lg:max-w-xl text-center min-h-sm lg:min-h-[400px] flex flex-col justify-center lg:gap-y-12">
-              <p className="text-sm sm:text-base md:text-lg font-medium text-black mb-4 sm:mb-6">
+            <div className="bg-[#f9c57b] rounded-2xl p-6 sm:p-8 lg:p-10 w-full lg:max-w-xl text-center flex flex-col justify-center gap-y-6">
+              <p className="text-sm sm:text-base md:text-lg font-medium text-black">
                 Quero fazer parte como voluntário!
               </p>
               <Button
@@ -50,9 +53,12 @@ export function ContactSection() {
           </div>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-black mt-6 lg:mt-2">
-          contatos
-        </h2>
+        {/* Título no final */}
+        <div className="w-full mt-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-black">
+            contatos
+          </h2>
+        </div>
       </div>
     </section>
   );

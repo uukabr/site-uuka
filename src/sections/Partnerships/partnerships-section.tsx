@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export function PartnershipsSection() {
   return (
     <section id="parcerias" className="pt-[72px] min-h-screen w-full bg-[#F59F23] text-black snap-start">
-      <div className="min-h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16">
+      <div className="min-h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 pb-16">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16">
 
           <div className="flex-1 lg:flex-2">
