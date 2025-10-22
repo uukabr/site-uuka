@@ -3,7 +3,7 @@
 export function ScheduleSection() {
   return (
     <section id="cronograma" className="h-full w-full bg-white text-black">
-      <div className="h-screen w-full flex flex-col justify-between p-6 md:p-12 lg:p-16">
+      <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16">
 
         <div className="flex justify-start">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black">

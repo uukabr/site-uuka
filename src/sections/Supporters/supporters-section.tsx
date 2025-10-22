@@ -2,6 +2,7 @@
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { Supporters } from '@/types/strapi'
+import Autoplay from 'embla-carousel-autoplay'
 import Image from 'next/image'
 
 type SupportersSectionProps = {
@@ -37,6 +38,7 @@ export function SupportersSection({ supporters }: SupportersSectionProps) {
                 align: "start",
                 loop: true,
               }}
+              plugins={[Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })]}
               className="w-full"
             >
               <CarouselContent>

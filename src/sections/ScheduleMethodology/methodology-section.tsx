@@ -5,7 +5,7 @@ import PercentageCounter from "@/utils/percentage-counter";
 export function MethodologySection() {
   return (
     <section id="metodologia" className="h-full w-full bg-[#F59F23] text-black">
-      <div className="h-screen w-full flex flex-col justify-between p-6 md:p-12 lg:p-16">
+      <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16">
         <div className="flex-1 flex items-center justify-center">
           <div className="max-w-sm flex flex-col items-center text-center gap-4">
             <div className="gap-2">
