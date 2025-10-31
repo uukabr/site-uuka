@@ -49,6 +49,7 @@ export type Header = {
 export type ImageHeroItem = {
   id: number;
   image: Image;
+  overlayText: string | null;
 }
 
 export type MissionVisionValuesItem = {
@@ -84,6 +85,7 @@ export type ContactListItem = {
   id: number;
   label: string;
   link: string | null;
+  icon: Image | null;
 }
 
 export type Contact = {

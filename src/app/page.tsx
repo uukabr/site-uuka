@@ -18,7 +18,7 @@ async function fetchLandingPage(): Promise<ApiResponse['data']> {
     'populate[About][populate][MissionVisionValues][populate]': 'image',
     'populate[Testimonials][populate]': '*',
     'populate[Supporters][populate]': '*',
-    'populate[Contact][populate]': '*',
+    'populate[Contact][populate][ContactList][populate]': 'icon',
     'populate[Partnerships]': '*',
     'populate[Leadership][populate][LeadershipCard][populate]': 'photo',
   });
@@ -47,14 +47,17 @@ async function fetchLandingPage(): Promise<ApiResponse['data']> {
 
 export default async function Home() {
   const landingPage = await fetchLandingPage();
+  const headerData = landingPage.Header;
   const imageHeroItems = landingPage.About.imageHero || [];
   const supportersData = landingPage.Supporters;
   const testimonialsData = landingPage.Testimonials;
   const leadershipData = landingPage.Leadership;
+  const contactData = landingPage.Contact;
+  const partnershipsData = landingPage.Partnerships;
 
   return (
     <div className="relative">
-      <Header />
+      <Header header={headerData} />
 
       <main className="w-full snap-y snap-mandatory overflow-y-scroll h-screen">
         <HeroSection items={imageHeroItems} />
@@ -63,10 +66,10 @@ export default async function Home() {
         <ScheduleMethodologySection />
         <VirtuousCycleLeadershipSection />
         <LeadershipSection leadership={leadershipData} />
-        <PartnershipsSection />
+        <PartnershipsSection partnerships={partnershipsData} />
         <SupportersSection supporters={supportersData} />
         <TestimonialsSection testimonials={testimonialsData} />
-        <ContactSection />
+        <ContactSection contact={contactData} />
       </main>
     </div>
   );

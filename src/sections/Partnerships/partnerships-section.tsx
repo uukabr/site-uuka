@@ -1,8 +1,13 @@
 'use client'
 
 import { Button } from "@/components/ui/button";
+import { Partnerships } from "@/types/strapi";
 
-export function PartnershipsSection() {
+type PartnershipsSectionProps = {
+  partnerships: Partnerships;
+}
+
+export function PartnershipsSection({ partnerships }: PartnershipsSectionProps) {
   return (
     <section id="parcerias" className="pt-[72px] min-h-screen w-full bg-[#F59F23] text-black">
       <div className="min-h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-14 gap-8">
@@ -29,9 +34,14 @@ export function PartnershipsSection() {
                 Você ou a sua empresa pode nos apoiar!
               </p>
               <Button
+                asChild
                 className="rounded-xl bg-[#F59F23] text-black px-3 md:px-4 py-2 hover:bg-white transition text-xs md:text-sm font-bold whitespace-nowrap w-full"
               >
-                Cadastrar
+                {partnerships.ButtonLink ? (
+                  <a href={partnerships.ButtonLink} target="_blank" rel="noreferrer">{partnerships.ButtonLabel}</a>
+                ) : (
+                  <span>{partnerships.ButtonLabel}</span>
+                )}
               </Button>
             </div>
           </div>

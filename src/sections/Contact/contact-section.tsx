@@ -1,9 +1,14 @@
-'use client'
 
 import { Button } from "@/components/ui/button";
-import { Instagram, Linkedin, Mail } from "lucide-react";
+import { Contact } from "@/types/strapi";
+import Image from "next/image";
 
-export function ContactSection() {
+type ContactSectionProps = {
+  contact: Contact;
+}
+
+export function ContactSection({ contact }: ContactSectionProps) {
+
   return (
     <section
       id="contatos"
@@ -15,26 +20,37 @@ export function ContactSection() {
 
           <div className="flex-1 flex flex-col justify-center">
             <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <Mail className="w-6 h-6 text-black" />
-                <span className="text-sm sm:text-base md:text-lg lg:text-xl text-black">
-                  admin@uuka.com.br
-                </span>
-              </div>
+              {contact?.ContactList.map((item) => {
+                const imageUrl = `${process.env.NEXT_PUBLIC_URL}${item?.icon?.url}`
+                const alt = item.icon?.alternativeText || item.label;
 
-              <div className="flex items-center gap-4">
-                <Instagram className="w-6 h-6 text-black" />
-                <span className="text-sm sm:text-base md:text-lg lg:text-xl text-black">
-                  Instagram
-                </span>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <Linkedin className="w-6 h-6 text-black" />
-                <span className="text-sm sm:text-base md:text-lg lg:text-xl text-black">
-                  LinkedIn
-                </span>
-              </div>
+                return (
+                  <div key={item.id} className="flex items-center gap-4">
+                    {imageUrl && (
+                      <Image
+                        src={imageUrl}
+                        alt={alt}
+                        width={24}
+                        height={24}
+                      />
+                    )}
+                    {item.link ? (
+                      <a
+                        href={item.link}
+                        className="text-sm sm:text-base md:text-lg lg:text-xl text-black"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {item.label}
+                      </a>
+                    ) : (
+                      <span className="text-sm sm:text-base md:text-lg lg:text-xl text-black">
+                        {item.label}
+                      </span>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
 
@@ -44,9 +60,14 @@ export function ContactSection() {
                 Quero fazer parte como voluntário!
               </p>
               <Button
+                asChild
                 className="rounded-xl bg-[#F59F23] text-black px-3 md:px-4 py-2 hover:bg-white transition text-xs md:text-sm font-bold whitespace-nowrap w-full"
               >
-                CADASTRAR
+                {contact.ButtonLink ? (
+                  <a href={contact.ButtonLink} target="_blank" rel="noreferrer">{contact.ButtonLabel}</a>
+                ) : (
+                  <span>{contact.ButtonLabel}</span>
+                )}
               </Button>
             </div>
           </div>
@@ -56,6 +77,6 @@ export function ContactSection() {
           contatos
         </h2>
       </div>
-    </section>
+    </section >
   );
 }
