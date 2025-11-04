@@ -7,7 +7,6 @@ type FooterProps = {
   contact: Contact;
 }
 
-
 export function Footer({ contact }: FooterProps) {
   return (
     <footer className="bg-black text-[#F59F23] py-10 px-6 md:px-10 lg:px-14">
