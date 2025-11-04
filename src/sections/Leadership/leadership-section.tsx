@@ -11,23 +11,14 @@ import { cn } from "@/lib/utils";
 import { Leadership } from "@/types/strapi";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import { useCallback, useState } from "react";
+import { useState } from "react";
 
 type LeadershipSectionProps = {
   leadership: Leadership;
-}
+};
 
 export function LeadershipSection({ leadership }: LeadershipSectionProps) {
-  const [isPaused, setIsPaused] = useState(false);
   const [tappedId, setTappedId] = useState<number | null>(null);
-
-  const handleMouseEnter = useCallback(() => {
-    setIsPaused(true);
-  }, []);
-
-  const handleMouseLeave = useCallback(() => {
-    setIsPaused(false);
-  }, []);
 
   function toggleTapped(id: number) {
     setTappedId((prev) => (prev === id ? null : id));
@@ -47,11 +38,7 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
     >
       <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between px-4 md:px-12 lg:px-16 pb-14 gap-8">
         <div className="flex-1 flex items-center justify-center">
-          <div
-            className="w-full max-w-5xl relative overflow-visible"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
+          <div className="w-full max-w-5xl relative overflow-visible">
             <Carousel
               opts={{
                 align: "start",
@@ -60,7 +47,7 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
               }}
               plugins={[
                 Autoplay({
-                  delay: 3000,
+                  delay: 2000,
                   stopOnInteraction: false,
                   stopOnMouseEnter: true,
                 }),
@@ -73,7 +60,10 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
                   const alt = member.photo.alternativeText || member.photo.name;
 
                   return (
-                    <CarouselItem key={member.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/4">
+                    <CarouselItem
+                      key={member.id}
+                      className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/4"
+                    >
                       <div
                         className="relative group cursor-pointer"
                         onClick={() => toggleTapped(member.id)}
@@ -82,7 +72,7 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
                         onKeyDown={(e) => handleKeyToggle(e, member.id)}
                         aria-pressed={tappedId === member.id}
                       >
-                        <div className="relative w-full h-80 rounded-lg overflow-hidden">
+                        <div className="relative w-full h-80 sm:h-96 md:h-[28rem] lg:h-[32rem] rounded-lg overflow-hidden">
                           <Image
                             src={imageUrl}
                             alt={alt}
@@ -91,14 +81,12 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
                             quality={100}
                             className={cn(
                               "object-cover transition-all duration-700",
-                              tappedId === member.id
+                              (member.isColor || tappedId === member.id)
                                 ? "grayscale-0"
                                 : "grayscale group-hover:grayscale-0"
                             )}
                           />
-
                           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent group-hover:from-black/20 transition-all duration-700" />
-
                           <div className="absolute bottom-0 left-0 right-0 p-4">
                             <div className="bg-black/30 rounded-lg p-3 group-hover:bg-black/40 transition-all duration-700">
                               <h3 className="text-sm sm:text-base font-bold uppercase text-white drop-shadow-lg">

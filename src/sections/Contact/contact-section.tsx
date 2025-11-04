@@ -73,7 +73,7 @@ export function ContactSection({ contact }: ContactSectionProps) {
           </div>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-black">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-black mt-10">
           contatos
         </h2>
       </div>

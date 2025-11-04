@@ -59,7 +59,7 @@ export default async function Home() {
     <div className="relative">
       <Header header={headerData} />
 
-      <main className="w-full snap-y snap-mandatory overflow-y-scroll h-screen">
+      <main className="w-full overflow-y-scroll h-screen">
         <HeroSection items={imageHeroItems} />
         <AboutSection />
         <MissionVisionValuesSection />

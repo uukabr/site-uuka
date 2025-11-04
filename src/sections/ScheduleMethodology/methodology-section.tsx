@@ -4,8 +4,8 @@ import PercentageCounter from "@/utils/percentage-counter";
 
 export function MethodologySection() {
   return (
-    <section id="metodologia" className="h-full w-full bg-[#F59F23] text-black">
-      <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16">
+    <section id="metodologia" className="h-screen w-full bg-[#F59F23] text-black">
+      <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 lg:gap-16">
         <div className="flex-1 flex items-center justify-center">
           <div className="max-w-sm flex flex-col items-center text-center gap-4">
             <div className="gap-2">
@@ -26,7 +26,7 @@ export function MethodologySection() {
           </div>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-black">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold text-black lg:mt-10">
           metodologia
         </h2>
       </div>

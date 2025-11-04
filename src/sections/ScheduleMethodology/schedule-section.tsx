@@ -2,11 +2,11 @@
 
 export function ScheduleSection() {
   return (
-    <section id="cronograma" className="h-full w-full bg-white text-black">
-      <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16">
+    <section id="cronograma" className="h-screen w-full bg-white text-black">
+      <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 lg:gap-20">
 
         <div className="flex justify-start">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black pt-6">
             Ciclo 8
           </h1>
         </div>
