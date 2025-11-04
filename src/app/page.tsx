@@ -1,3 +1,4 @@
+import { Footer } from "@/components/Footer/footer";
 import Header from "@/components/Header/header";
 import { AboutSection } from "@/sections/About/about-section";
 import { ContactSection } from "@/sections/Contact/contact-section";
@@ -70,6 +71,7 @@ export default async function Home() {
         <SupportersSection supporters={supportersData} />
         <TestimonialsSection testimonials={testimonialsData} />
         <ContactSection contact={contactData} />
+        <Footer contact={contactData} />
       </main>
     </div>
   );
