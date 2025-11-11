@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ['supportive-oasis-960fc14187.media.strapiapp.com'],
+  },
+  devIndicators: false
 };
 
 export default nextConfig;
