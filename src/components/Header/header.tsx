@@ -13,7 +13,7 @@ export function Header({ header }: HeaderProps) {
     <header className="bg-black text-[#F59F23] px-4 md:px-6 fixed top-0 left-0 right-0 z-50 shadow-lg h-[72px]">
       <div className="flex justify-between items-center gap-4 h-full">
         <div className="flex items-center gap-3">
-          <MobileMenu />
+          <MobileMenu header={header} />
           <span className="font-bold text-base md:text-lg whitespace-nowrap">EI, UUKAS!</span>
         </div>
 
