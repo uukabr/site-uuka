@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 export function ValuesSection() {
   return (
@@ -8,29 +8,40 @@ export function ValuesSection() {
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-12 mb-8">
             <div className="space-y-4 md:space-y-12">
               <div>
-                <h3 className="text-lg md:text-xl font-bold text-black mb-2">Inconformismo</h3>
-                <p className="text-sm md:text-base text-black">Questionamos padrões.</p>
+                <h3 className="text-lg md:text-xl font-bold text-black mb-2">
+                  Inconformismo
+                </h3>
+                <p className="text-sm md:text-base text-black">
+                  Questionamos padrões.
+                </p>
               </div>
 
               <div>
-                <h3 className="text-lg md:text-xl font-bold text-black mb-2">Coletividade</h3>
+                <h3 className="text-lg md:text-xl font-bold text-black mb-2">
+                  Coletividade
+                </h3>
                 <p className="text-sm md:text-base text-black">
-                  Acreditamo no poder da comunidade e incentivamos os avanços coletivos.
+                  Acreditamo no poder da comunidade e incentivamos os avanços
+                  coletivos.
                 </p>
               </div>
             </div>
 
             <div className="space-y-4">
               <div>
-                <h3 className="text-lg md:text-xl font-bold text-black mb-2">Equidade</h3>
+                <h3 className="text-lg md:text-xl font-bold text-black mb-2">
+                  Equidade
+                </h3>
                 <p className="text-sm md:text-base text-black">
-                  Reconhecemos a existência do racismo estrutural e
-                  trabalhamos ativamente para reduzir desigualdades que derivam dele.
+                  Reconhecemos a existência do racismo estrutural e trabalhamos
+                  ativamente para reduzir desigualdades que derivam dele.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-lg md:text-xl font-bold text-black mb-2">Protagonismo</h3>
+                <h3 className="text-lg md:text-xl font-bold text-black mb-2">
+                  Protagonismo
+                </h3>
                 <p className="text-sm md:text-base text-black">
                   Buscamos colocar pessoas negras em posições de destaque.
                 </p>

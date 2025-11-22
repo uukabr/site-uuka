@@ -1,10 +1,13 @@
-'use client'
+'use client';
 
-import PercentageCounter from "@/utils/percentage-counter";
+import PercentageCounter from '@/utils/percentage-counter';
 
 export function MethodologySection() {
   return (
-    <section id="metodologia" className="h-screen w-full bg-[#F59F23] text-black">
+    <section
+      id="metodologia"
+      className="h-screen w-full bg-[#F59F23] text-black"
+    >
       <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 lg:gap-16">
         <div className="flex-1 flex items-center justify-center">
           <div className="max-w-sm flex flex-col items-center text-center gap-4">
@@ -17,11 +20,9 @@ export function MethodologySection() {
             </div>
 
             <p className="text-md mb-4 leading-relaxed">
-              Todo processo de mentoria será sem custo
-              para a pessoa mentorada, precisando
-              apenas comprometer-se a mentorar pelo
-              menos uma pessoa depois que terminar o
-              processo da sua mentoria.
+              Todo processo de mentoria será sem custo para a pessoa mentorada,
+              precisando apenas comprometer-se a mentorar pelo menos uma pessoa
+              depois que terminar o processo da sua mentoria.
             </p>
           </div>
         </div>

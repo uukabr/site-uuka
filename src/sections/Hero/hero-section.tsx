@@ -1,19 +1,23 @@
-'use client'
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import { ImageHeroItem } from "@/types/strapi";
-import Autoplay from "embla-carousel-autoplay";
-import { CircleX } from "lucide-react";
-import Image from "next/image";
-import React from "react";
+'use client';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from '@/components/ui/carousel';
+import { ImageHeroItem } from '@/types/strapi';
+import Autoplay from 'embla-carousel-autoplay';
+import { CircleX } from 'lucide-react';
+import Image from 'next/image';
+import React from 'react';
 
 type HeroSectionProps = {
   items: ImageHeroItem[];
-}
+};
 
 export function HeroSection({ items }: HeroSectionProps) {
   const plugin = React.useRef(
     Autoplay({ delay: 4000, stopOnInteraction: true })
-  )
+  );
 
   if (!items || items.length === 0) {
     return (
@@ -31,7 +35,7 @@ export function HeroSection({ items }: HeroSectionProps) {
       <div className="h-[calc(100vh-72px)] w-full overflow-hidden">
         <Carousel
           opts={{
-            align: "start",
+            align: 'start',
             loop: true,
           }}
           plugins={[plugin.current]}
@@ -45,7 +49,10 @@ export function HeroSection({ items }: HeroSectionProps) {
               const overlayText = item.overlayText;
 
               return (
-                <CarouselItem key={item.id} className="pl-0 h-[calc(100vh-72px)]">
+                <CarouselItem
+                  key={item.id}
+                  className="pl-0 h-[calc(100vh-72px)]"
+                >
                   <div className="relative h-[calc(100vh-72px)] w-full">
                     <Image
                       src={imageUrl}
