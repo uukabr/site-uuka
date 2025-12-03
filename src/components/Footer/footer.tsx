@@ -22,7 +22,7 @@ export function Footer({ contact }: FooterProps) {
 
         <div className="w-full flex flex-col md:flex-row justify-between md:items-start gap-6 md:gap-0 text-sm">
           <div className="flex flex-col gap-2 md:items-start md:text-left order-3 md:order-none">
-            <p>©2015 UUKA. Todos os direitos reservados.</p>
+            <p>© 2025 UUKA. Todos os direitos reservados.</p>
             <p>
               Desenvolvido por:{' '}
               <a
