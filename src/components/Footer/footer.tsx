@@ -26,7 +26,7 @@ export function Footer({ contact }: FooterProps) {
             <p>
               Desenvolvido por:{' '}
               <a
-                href="https://github.com/flavia-dantas"
+                href="https://www.linkedin.com/in/flavia-dantas/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#F9c57b] transition"

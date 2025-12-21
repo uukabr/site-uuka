@@ -11,6 +11,7 @@ import { Supporters } from '@/types/strapi';
 import Autoplay from 'embla-carousel-autoplay';
 import { CircleX } from 'lucide-react';
 import Image from 'next/image';
+import React from 'react';
 
 type SupportersSectionProps = {
   supporters?: Supporters;
@@ -18,6 +19,16 @@ type SupportersSectionProps = {
 
 export function SupportersSection({ supporters }: SupportersSectionProps) {
   const images = supporters?.imageLogo || [];
+
+  const plugin = React.useMemo(
+    () =>
+      Autoplay({
+        delay: 3000,
+        stopOnInteraction: false,
+        stopOnMouseEnter: true,
+      }),
+    []
+  );
 
   if (!images || images.length === 0) {
     return (
@@ -53,13 +64,7 @@ export function SupportersSection({ supporters }: SupportersSectionProps) {
                 align: 'start',
                 loop: true,
               }}
-              plugins={[
-                Autoplay({
-                  delay: 3000,
-                  stopOnInteraction: false,
-                  stopOnMouseEnter: true,
-                }),
-              ]}
+              plugins={[plugin]}
               className="w-full"
             >
               <CarouselContent>

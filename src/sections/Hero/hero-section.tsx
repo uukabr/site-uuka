@@ -15,8 +15,9 @@ type HeroSectionProps = {
 };
 
 export function HeroSection({ items }: HeroSectionProps) {
-  const plugin = React.useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
+  const plugin = React.useMemo(
+    () => Autoplay({ delay: 4000, stopOnInteraction: true }),
+    []
   );
 
   if (!items || items.length === 0 || items[0].image === null) {
@@ -35,7 +36,7 @@ export function HeroSection({ items }: HeroSectionProps) {
       <div className="relative w-full">
         <Carousel
           opts={{ align: 'start', loop: true }}
-          plugins={[plugin.current]}
+          plugins={[plugin]}
           className="w-full"
         >
           <CarouselContent className="-ml-0">

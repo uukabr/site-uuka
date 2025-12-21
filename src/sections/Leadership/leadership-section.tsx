@@ -12,7 +12,7 @@ import { Leadership } from '@/types/strapi';
 import Autoplay from 'embla-carousel-autoplay';
 import { CircleX } from 'lucide-react';
 import Image from 'next/image';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 type LeadershipSectionProps = {
   leadership?: Leadership;
@@ -31,6 +31,16 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
       toggleTapped(id);
     }
   }
+
+  const plugin = React.useMemo(
+    () =>
+      Autoplay({
+        delay: 2000,
+        stopOnInteraction: false,
+        stopOnMouseEnter: true,
+      }),
+    []
+  );
 
   if (!leadership || leadership.LeadershipCard.length === 0) {
     return (
@@ -68,13 +78,7 @@ export function LeadershipSection({ leadership }: LeadershipSectionProps) {
                 loop: true,
                 dragFree: true,
               }}
-              plugins={[
-                Autoplay({
-                  delay: 2000,
-                  stopOnInteraction: false,
-                  stopOnMouseEnter: true,
-                }),
-              ]}
+              plugins={[plugin]}
               className="w-full"
             >
               <CarouselContent className="-ml-2 md:-ml-4 gap-2 md:gap-4">
