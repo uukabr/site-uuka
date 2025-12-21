@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Carousel,
@@ -6,12 +6,12 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components/ui/carousel';
-import { Supporters } from '@/types/strapi';
-import Autoplay from 'embla-carousel-autoplay';
-import { CircleX } from 'lucide-react';
-import Image from 'next/image';
-import React from 'react';
+} from "@/components/ui/carousel";
+import { Supporters } from "@/types/strapi";
+import Autoplay from "embla-carousel-autoplay";
+import { CircleX } from "lucide-react";
+import Image from "next/image";
+import React from "react";
 
 type SupportersSectionProps = {
   supporters?: Supporters;
@@ -61,7 +61,7 @@ export function SupportersSection({ supporters }: SupportersSectionProps) {
           <div className="w-full max-w-6xl relative">
             <Carousel
               opts={{
-                align: 'start',
+                align: "start",
                 loop: true,
               }}
               plugins={[plugin]}

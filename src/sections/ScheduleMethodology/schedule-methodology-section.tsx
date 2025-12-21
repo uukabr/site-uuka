@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import type { CarouselApi } from '@/components/ui/carousel';
+import type { CarouselApi } from "@/components/ui/carousel";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from '@/components/ui/carousel';
-import Autoplay from 'embla-carousel-autoplay';
-import { useEffect, useMemo, useState } from 'react';
-import { MethodologySection } from './methodology-section';
-import { ScheduleSection } from './schedule-section';
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { useEffect, useMemo, useState } from "react";
+import { MethodologySection } from "./methodology-section";
+import { ScheduleSection } from "./schedule-section";
 
 export function ScheduleMethodologySection() {
   const plugin = useMemo(
@@ -23,30 +23,30 @@ export function ScheduleMethodologySection() {
     if (!api) return;
 
     const map: Record<string, number> = {
-      '#cronograma': 0,
-      '#metodologia': 1,
+      "#cronograma": 0,
+      "#metodologia": 1,
     };
 
     function handleHash() {
       const idx = map[window.location.hash];
       if (idx === undefined) return;
 
-      const targetId = window.location.hash.replace('#', '');
+      const targetId = window.location.hash.replace("#", "");
       const targetEl = document.getElementById(targetId);
       const carouselRegion = targetEl?.closest(
         '[role="region"][data-slot="carousel"]'
       ) as HTMLElement | undefined;
 
       if (carouselRegion)
-        carouselRegion.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        carouselRegion.scrollIntoView({ behavior: "smooth", block: "start" });
 
       const currentApi = api!;
       setTimeout(() => currentApi.scrollTo(idx), 700);
     }
 
     handleHash();
-    window.addEventListener('hashchange', handleHash);
-    return () => window.removeEventListener('hashchange', handleHash);
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
   }, [api]);
 
   return (
@@ -55,7 +55,7 @@ export function ScheduleMethodologySection() {
         <Carousel
           setApi={setApi}
           opts={{
-            align: 'start',
+            align: "start",
             loop: true,
           }}
           plugins={[plugin]}

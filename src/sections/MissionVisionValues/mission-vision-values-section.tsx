@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import type { CarouselApi } from '@/components/ui/carousel';
+import type { CarouselApi } from "@/components/ui/carousel";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from '@/components/ui/carousel';
-import Autoplay from 'embla-carousel-autoplay';
-import { useEffect, useMemo, useState } from 'react';
-import { MissionSection } from './mission-section';
-import { ValuesSection } from './values-section';
-import { VisionSection } from './vision-section';
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { useEffect, useMemo, useState } from "react";
+import { MissionSection } from "./mission-section";
+import { ValuesSection } from "./values-section";
+import { VisionSection } from "./vision-section";
 
 export function MissionVisionValuesSection() {
   const plugin = useMemo(
@@ -24,23 +24,23 @@ export function MissionVisionValuesSection() {
     if (!api) return;
 
     const map: Record<string, number> = {
-      '#missao': 0,
-      '#visao': 1,
-      '#valores': 2,
+      "#missao": 0,
+      "#visao": 1,
+      "#valores": 2,
     };
 
     function handleHash() {
       const idx = map[window.location.hash];
       if (idx === undefined) return;
 
-      const targetId = window.location.hash.replace('#', '');
+      const targetId = window.location.hash.replace("#", "");
       const targetEl = document.getElementById(targetId);
       const carouselRegion = targetEl?.closest(
         '[role="region"][data-slot="carousel"]'
       ) as HTMLElement | undefined;
 
       if (carouselRegion) {
-        carouselRegion.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        carouselRegion.scrollIntoView({ behavior: "smooth", block: "start" });
       }
 
       const currentApi = api!;
@@ -49,8 +49,8 @@ export function MissionVisionValuesSection() {
 
     handleHash();
 
-    window.addEventListener('hashchange', handleHash);
-    return () => window.removeEventListener('hashchange', handleHash);
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
   }, [api]);
 
   return (
@@ -59,7 +59,7 @@ export function MissionVisionValuesSection() {
         <Carousel
           setApi={setApi}
           opts={{
-            align: 'start',
+            align: "start",
             loop: true,
           }}
           plugins={[plugin]}
