@@ -23,6 +23,7 @@ async function fetchLandingPage(): Promise<LandingPageData> {
     "populate[About][populate][imageHero][populate]": "image",
     "populate[About][populate][MissionVisionValues][populate]": "image",
     "populate[About][populate][Schedule]": "*",
+    "populate[About][populate][impact][populate]": "*",
     "populate[Testimonials][populate]": "*",
     "populate[Supporters][populate]": "*",
     "populate[Contact][populate][ContactList][populate]": "icon",
@@ -60,6 +61,7 @@ export default async function Home() {
   const leadershipData = landingPage.Leadership || [];
   const contactData = landingPage.Contact;
   const partnershipsData = landingPage.Partnerships;
+  const impactData = landingPage.About.impact || undefined;
 
   return (
     <div className="relative">
@@ -69,7 +71,10 @@ export default async function Home() {
         <HeroSection items={imageHeroItems} />
         <AboutSection />
         <MissionVisionValuesSection />
-        <ScheduleMethodologySection about={landingPage.About} />
+        <ScheduleMethodologySection
+          about={landingPage.About}
+          impact={impactData}
+        />
         <VirtuousCycleLeadershipSection />
         <LeadershipSection leadership={leadershipData} />
         <PartnershipsSection partnerships={partnershipsData} />
