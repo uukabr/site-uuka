@@ -9,7 +9,10 @@ export function ErrorMessage({
   title: string;
 }) {
   return (
-    <Alert variant="destructive">
+    <Alert
+      variant="destructive"
+      className="bg-red-600 text-white border-red-700 border"
+    >
       <CircleX />
       <AlertTitle>{title}</AlertTitle>
       <AlertDescription>{message}</AlertDescription>
