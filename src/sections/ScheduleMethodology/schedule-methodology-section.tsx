@@ -70,6 +70,7 @@ export function ScheduleMethodologySection({ about }: Props) {
             <CarouselItem className="pl-0">
               <ScheduleSection about={about} />
             </CarouselItem>
+
             <CarouselItem className="pl-0">
               <MethodologySection />
             </CarouselItem>

@@ -105,6 +105,7 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                   >
                     Público-Alvo
                   </a>
+
                   <a
                     href="#por-que"
                     onClick={handleLinkClick}
@@ -112,6 +113,7 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                   >
                     Por que?
                   </a>
+
                   <a
                     href="#missao"
                     onClick={handleLinkClick}
@@ -119,6 +121,7 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                   >
                     Missão
                   </a>
+
                   <a
                     href="#visao"
                     onClick={handleLinkClick}
@@ -126,6 +129,7 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                   >
                     Visão
                   </a>
+
                   <a
                     href="#valores"
                     onClick={handleLinkClick}
@@ -176,6 +180,15 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                   >
                     Cronograma
                   </a>
+
+                  <a
+                    href="#uuka-em-numeros"
+                    onClick={handleLinkClick}
+                    className="block px-4 py-2 text-[#F59F23] hover:text-[#F9c57b] hover:bg-black rounded-lg transition-colors text-sm"
+                  >
+                    Uuka em números
+                  </a>
+
                   <a
                     href="#lideranca"
                     onClick={handleLinkClick}
@@ -183,6 +196,7 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                   >
                     Liderança e Autoconhecimento
                   </a>
+
                   <a
                     href="#ciclo-virtuoso"
                     onClick={handleLinkClick}
@@ -233,6 +247,7 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                   >
                     Parcerias
                   </a>
+
                   <a
                     href="#apoiadores"
                     onClick={handleLinkClick}

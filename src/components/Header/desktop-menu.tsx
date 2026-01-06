@@ -107,6 +107,15 @@ export default function DesktopMenu() {
 
             <NavigationMenuLink asChild>
               <a
+                href="#uuka-em-numeros"
+                className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+              >
+                Uuka em números
+              </a>
+            </NavigationMenuLink>
+
+            <NavigationMenuLink asChild>
+              <a
                 href="#lideranca"
                 className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
               >

@@ -57,11 +57,22 @@ export type MissionVisionValuesItem = {
   image: Image | null;
 };
 
+export type Impact = {
+  id?: number;
+  mentorsTrained?: number | null;
+  menteesInCurrentCycle?: number | null;
+  totalMentoringHours?: number | null;
+  totalCyclesCompleted?: number | null;
+  currentCycleNumber?: number | null;
+  impactMapImage?: Image | null;
+};
+
 export type About = {
   id: number;
   imageHero: ImageHeroItem[];
   MissionVisionValues: MissionVisionValuesItem[];
   Schedule: ScheduleItem;
+  impact: Impact;
 };
 
 export type ScheduleItem = {

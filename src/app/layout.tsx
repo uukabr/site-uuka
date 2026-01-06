@@ -11,6 +11,7 @@ const openSans = Open_Sans({
   weight: ["400", "700"],
   style: ["normal", "italic"],
   display: "swap",
+  variable: "--font-open-sans",
 });
 
 export const instrumentSans = Instrument_Sans({
@@ -18,6 +19,7 @@ export const instrumentSans = Instrument_Sans({
   weight: ["400", "700"],
   style: ["normal", "italic"],
   display: "swap",
+  variable: "--font-instrument",
 });
 
 export default function RootLayout({
