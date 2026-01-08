@@ -92,8 +92,14 @@ export function SupportersSection({ supporters }: SupportersSectionProps) {
                   );
                 })}
               </CarouselContent>
-              <CarouselPrevious className="absolute -left-8 sm:-left-10 md:-left-12 top-1/2 -translate-y-1/2 text-white border-none w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-black/50 hover:bg-black/70" />
-              <CarouselNext className="absolute -right-8 sm:-right-10 md:-right-12 top-1/2 -translate-y-1/2 text-white border-none w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-black/50 hover:bg-black/70" />
+              <CarouselPrevious
+                className="absolute -left-8 sm:-left-10 md:-left-12 top-1/2 -translate-y-1/2 text-white border-none w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-black/50 hover:bg-black/70"
+                aria-label="Voltar slide anterior do carrossel de apoiadores"
+              />
+              <CarouselNext
+                className="absolute -right-8 sm:-right-10 md:-right-12 top-1/2 -translate-y-1/2 text-white border-none w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-black/50 hover:bg-black/70"
+                aria-label="Avançar próximo slide do carrossel de apoiadores"
+              />
             </Carousel>
           </div>
         </div>

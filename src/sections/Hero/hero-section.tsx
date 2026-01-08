@@ -64,9 +64,9 @@ export function HeroSection({ items }: HeroSectionProps) {
 
                     {overlayText && (
                       <div className="absolute bottom-2 md:top-96 lg:top-1/2 left-4 right-4 text-white p-4 rounded-lg max-w-full md:max-w-md">
-                        <h3 className="text-xs md:text-2xl 2xl:text-3xl leading-snug whitespace-pre-line">
+                        <h1 className="text-xs md:text-2xl 2xl:text-3xl leading-snug whitespace-pre-line">
                           {overlayText}
-                        </h3>
+                        </h1>
                       </div>
                     )}
                   </div>
