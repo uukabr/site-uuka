@@ -49,16 +49,16 @@ export function PartnershipsSection({
                 asChild
                 className="rounded-xl bg-[#F59F23] text-black px-3 md:px-4 py-2 hover:bg-white transition text-xs md:text-sm font-bold whitespace-nowrap w-full"
               >
-                {partnerships.ButtonLink ? (
+                {partnerships?.ButtonLink ? (
                   <a
                     href={partnerships.ButtonLink}
                     target="_blank"
                     rel="noreferrer"
                   >
-                    {partnerships.ButtonLabel}
+                    {partnerships?.ButtonLabel ?? ""}
                   </a>
                 ) : (
-                  <span>{partnerships.ButtonLabel}</span>
+                  <span>{partnerships?.ButtonLabel ?? ""}</span>
                 )}
               </Button>
             </div>

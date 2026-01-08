@@ -22,7 +22,6 @@ async function fetchLandingPage(): Promise<LandingPageData> {
   const params = new URLSearchParams({
     "populate[Header]": "*",
     "populate[About][populate][imageHero][populate]": "image",
-    "populate[About][populate][MissionVisionValues][populate]": "image",
     "populate[About][populate][Schedule]": "*",
     "populate[About][populate][impact][populate]": "*",
     "populate[Testimonials][populate]": "*",

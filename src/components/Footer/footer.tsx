@@ -50,7 +50,7 @@ export function Footer({ contact }: FooterProps) {
           </div>
 
           <div className="flex flex-col gap-2 md:items-end md:text-right">
-            {contact.ButtonLink ? (
+            {contact?.ButtonLink ? (
               <Link
                 href={contact.ButtonLink}
                 className="hover:text-[#F9c57b] transition"

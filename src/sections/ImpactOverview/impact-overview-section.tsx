@@ -87,13 +87,13 @@ export function ImpactOverviewSection({ impact }: ImpactOverviewSectionProps) {
           </div>
 
           <div className="flex w-full lg:w-1/2 lg:items-center justify-center">
-            {map ? (
+            {map?.url ? (
               <div className="w-full max-w-[550px]">
                 <Image
                   src={map.url}
-                  alt={map.alternativeText || map.name}
-                  width={map.width}
-                  height={map.height}
+                  alt={map?.alternativeText || map?.name || "Mapa de impacto"}
+                  width={map?.width ?? 550}
+                  height={map?.height ?? 400}
                   className="w-full h-auto object-contain"
                 />
               </div>

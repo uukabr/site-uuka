@@ -40,9 +40,9 @@ function formatFullDate(dateStr?: string | null) {
 }
 
 export function ScheduleSection({ about }: ScheduleSectionProps) {
-  const title = about?.Schedule.title;
-  const start = formatMonthYear(about?.Schedule.startDate);
-  const end = formatMonthYear(about?.Schedule.endDate);
+  const title = about?.Schedule?.title ?? "";
+  const start = formatMonthYear(about?.Schedule?.startDate);
+  const end = formatMonthYear(about?.Schedule?.endDate);
   const closure = formatFullDate(about?.Schedule?.closureDate);
 
   return (

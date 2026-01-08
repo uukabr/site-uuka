@@ -69,8 +69,10 @@ export function SupportersSection({ supporters }: SupportersSectionProps) {
             >
               <CarouselContent>
                 {images.map((image) => {
-                  const imageUrl = image.url;
-                  const alt = image.alternativeText || image.name;
+                  const imageUrl = image?.url ?? "";
+                  const alt = image?.alternativeText || image?.name || "Logo";
+
+                  if (!imageUrl) return null;
 
                   return (
                     <CarouselItem
@@ -81,8 +83,8 @@ export function SupportersSection({ supporters }: SupportersSectionProps) {
                         <Image
                           src={imageUrl}
                           alt={alt}
-                          width={image.width}
-                          height={image.height}
+                          width={image?.width ?? 200}
+                          height={image?.height ?? 200}
                           className="max-h-16 md:max-h-20 max-w-full object-contain"
                         />
                       </div>
