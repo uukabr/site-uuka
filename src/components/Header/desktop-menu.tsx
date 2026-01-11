@@ -117,9 +117,9 @@ export default function DesktopMenu() {
               <a
                 href="#uuka-em-numeros"
                 className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
-                aria-label="Navegar para seção Uuka em números"
+                aria-label="Navegar para seção Uuka em Números"
               >
-                Uuka em números
+                Uuka em Números
               </a>
             </NavigationMenuLink>
 

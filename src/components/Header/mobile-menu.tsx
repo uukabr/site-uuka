@@ -186,7 +186,7 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                     onClick={handleLinkClick}
                     className="block px-4 py-2 text-[#F59F23] hover:text-[#F9c57b] hover:bg-black rounded-lg transition-colors text-sm"
                   >
-                    Uuka em números
+                    Uuka em Números
                   </a>
 
                   <a

@@ -16,8 +16,6 @@ export function ImpactOverviewSection({ impact }: ImpactOverviewSectionProps) {
   const cycles = impact?.totalCyclesCompleted ?? 0;
   const map = impact?.impactMapImage ?? null;
 
-  // const formattedHours = new Intl.NumberFormat("pt-BR").format(hours);
-
   return (
     <section
       id="uuka-em-numeros"
@@ -108,9 +106,9 @@ export function ImpactOverviewSection({ impact }: ImpactOverviewSectionProps) {
         <div className="flex justify-start">
           <h2
             className={`${instrumentSans.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-[#F59F23] whitespace-nowrap`}
-            aria-label="Seção Uuka em números"
+            aria-label="Seção Uuka em Números"
           >
-            Uuka em números
+            uuka em números
           </h2>
         </div>
       </div>
