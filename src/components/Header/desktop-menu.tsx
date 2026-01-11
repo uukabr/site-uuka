@@ -22,6 +22,7 @@ export default function DesktopMenu() {
             <a
               href="#somos"
               className="text-[#F59F23] hover:text-[#F9c57b] font-bold text-sm md:text-base"
+              aria-label="Navegar para seção Somos"
             >
               Somos
             </a>
@@ -35,6 +36,7 @@ export default function DesktopMenu() {
               <a
                 href="#publico-alvo"
                 className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                aria-label="Navegar para seção Público-alvo"
               >
                 Público-alvo
               </a>
@@ -44,6 +46,7 @@ export default function DesktopMenu() {
               <a
                 href="#por-que"
                 className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                aria-label="Navegar para seção Por que?"
               >
                 Por que?
               </a>
@@ -53,6 +56,7 @@ export default function DesktopMenu() {
               <a
                 href="#missao"
                 className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                aria-label="Navegar para seção Missão"
               >
                 Missão
               </a>
@@ -62,6 +66,7 @@ export default function DesktopMenu() {
               <a
                 href="#visao"
                 className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                aria-label="Navegar para seção Visão"
               >
                 Visão
               </a>
@@ -71,6 +76,7 @@ export default function DesktopMenu() {
               <a
                 href="#valores"
                 className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                aria-label="Navegar para seção Valores"
               >
                 Valores
               </a>
@@ -87,6 +93,7 @@ export default function DesktopMenu() {
             <a
               href="#metodologia"
               className="text-[#F59F23] hover:text-[#F9c57b] font-bold text-sm md:text-base"
+              aria-label="Navegar para seção Metodologia"
             >
               Metodologia
             </a>
@@ -100,6 +107,7 @@ export default function DesktopMenu() {
               <a
                 href="#cronograma"
                 className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                aria-label="Navegar para seção Cronograma"
               >
                 Cronograma
               </a>
@@ -109,6 +117,7 @@ export default function DesktopMenu() {
               <a
                 href="#uuka-em-numeros"
                 className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                aria-label="Navegar para seção Uuka em números"
               >
                 Uuka em números
               </a>
@@ -118,6 +127,7 @@ export default function DesktopMenu() {
               <a
                 href="#lideranca"
                 className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                aria-label="Navegar para seção Liderança e Autoconhecimento"
               >
                 Liderança e Autoconhecimento
               </a>
@@ -127,6 +137,7 @@ export default function DesktopMenu() {
               <a
                 href="#ciclo-virtuoso"
                 className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                aria-label="Navegar para seção Ciclo Virtuoso"
               >
                 Ciclo Virtuoso
               </a>
@@ -143,6 +154,7 @@ export default function DesktopMenu() {
             <a
               href="#diretoria"
               className="text-[#F59F23] hover:text-[#F9c57b] font-bold text-sm md:text-base"
+              aria-label="Navegar para seção Diretoria"
             >
               Diretoria
             </a>
@@ -156,6 +168,7 @@ export default function DesktopMenu() {
               <a
                 href="#parcerias"
                 className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                aria-label="Navegar para seção Parcerias"
               >
                 Parcerias
               </a>
@@ -164,6 +177,7 @@ export default function DesktopMenu() {
               <a
                 href="#apoiadores"
                 className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base hover:font-bold"
+                aria-label="Navegar para seção Apoiadores"
               >
                 Apoiadores
               </a>
@@ -177,6 +191,7 @@ export default function DesktopMenu() {
             <a
               href="#depoimentos"
               className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base font-bold"
+              aria-label="Navegar para seção Depoimentos"
             >
               Depoimentos
             </a>
@@ -189,6 +204,7 @@ export default function DesktopMenu() {
             <a
               href="#contatos"
               className="text-[#F59F23] hover:text-[#F9c57b] hover:bg-black text-sm md:text-base font-bold"
+              aria-label="Navegar para seção Contatos"
             >
               Contatos
             </a>

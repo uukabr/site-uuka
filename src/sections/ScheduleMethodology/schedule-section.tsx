@@ -40,18 +40,18 @@ function formatFullDate(dateStr?: string | null) {
 }
 
 export function ScheduleSection({ about }: ScheduleSectionProps) {
-  const title = about?.Schedule.title;
-  const start = formatMonthYear(about?.Schedule.startDate);
-  const end = formatMonthYear(about?.Schedule.endDate);
+  const title = about?.Schedule?.title ?? "";
+  const start = formatMonthYear(about?.Schedule?.startDate);
+  const end = formatMonthYear(about?.Schedule?.endDate);
   const closure = formatFullDate(about?.Schedule?.closureDate);
 
   return (
     <section id="cronograma" className="h-screen w-full bg-white text-black">
       <div className="h-[calc(100vh-72px)] w-full flex flex-col justify-between p-6 md:p-12 lg:p-16 lg:gap-20">
         <div className="flex justify-start">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-black pt-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal text-black pt-6">
             {title}
-          </h1>
+          </h2>
         </div>
 
         <div className="flex justify-center items-center flex-1">

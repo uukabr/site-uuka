@@ -67,7 +67,7 @@ export function TestimonialsSection({
                           <Star
                             key={index}
                             className={`w-5 h-5 ${
-                              index < testimonial.rating
+                              index < (testimonial?.rating ?? 0)
                                 ? "fill-black text-black"
                                 : "fill-[#f9c57b] text-black"
                             }`}
@@ -77,18 +77,18 @@ export function TestimonialsSection({
 
                       <div className="mb-4">
                         <h3 className="font-bold text-black md:text-base lg:text-lg text-lg mb-1">
-                          {testimonial.name}
+                          {testimonial?.name ?? ""}
                         </h3>
 
                         <p className="text-gray-600 text-sm md:text-base lg:text-lg">
-                          {testimonial.role === "Mentee"
+                          {testimonial?.role === "Mentee"
                             ? "Mentorado"
                             : "Mentor"}
                         </p>
                       </div>
 
                       <p className="text-black text-sm md:text-base lg:text-lg flex-1">
-                        {testimonial.description}
+                        {testimonial?.description ?? ""}
                       </p>
                     </div>
                   </CarouselItem>

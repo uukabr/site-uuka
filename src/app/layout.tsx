@@ -1,10 +1,8 @@
 "use client";
 
-import { Instrument_Sans } from "next/font/google";
-import "./globals.css";
-
 import { Toaster } from "@/components/ui/sonner";
-import { Open_Sans } from "next/font/google";
+import { Instrument_Sans, Open_Sans } from "next/font/google";
+import "./globals.css";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -12,6 +10,7 @@ const openSans = Open_Sans({
   style: ["normal", "italic"],
   display: "swap",
   variable: "--font-open-sans",
+  preload: true,
 });
 
 export const instrumentSans = Instrument_Sans({
@@ -28,11 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <title>UUKA</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
+    <html lang="pt-BR">
       <body className={openSans.className}>
         {children}
         <Toaster richColors />

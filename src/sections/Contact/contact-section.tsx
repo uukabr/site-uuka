@@ -13,27 +13,27 @@ export function ContactSection({ contact }: ContactSectionProps) {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 xl:gap-16 flex-1 justify-center lg:justify-between items-center">
           <div className="flex-1 flex flex-col justify-center">
             <div className="space-y-6">
-              {contact?.ContactList.map((item) => {
+              {contact?.ContactList?.map((item) => {
                 const imageUrl = item?.icon?.url;
-                const alt = item.icon?.alternativeText || item.label;
+                const alt = item?.icon?.alternativeText || item?.label || "";
 
                 return (
                   <div key={item.id} className="flex items-center gap-4">
                     {imageUrl && (
                       <Image src={imageUrl} alt={alt} width={24} height={24} />
                     )}
-                    {item.link ? (
+                    {item?.link ? (
                       <a
                         href={item.link}
                         className="text-sm sm:text-base md:text-lg lg:text-xl text-black"
                         target="_blank"
                         rel="noreferrer"
                       >
-                        {item.label}
+                        {item?.label ?? ""}
                       </a>
                     ) : (
                       <span className="text-sm sm:text-base md:text-lg lg:text-xl text-black">
-                        {item.label}
+                        {item?.label ?? ""}
                       </span>
                     )}
                   </div>
@@ -52,12 +52,12 @@ export function ContactSection({ contact }: ContactSectionProps) {
                 asChild
                 className="rounded-xl bg-[#F59F23] text-black px-3 md:px-4 py-2 hover:bg-white transition text-xs md:text-sm font-bold whitespace-nowrap w-full"
               >
-                {contact.ButtonLink ? (
+                {contact?.ButtonLink ? (
                   <a href={contact.ButtonLink} target="_blank" rel="noreferrer">
-                    {contact.ButtonLabel}
+                    {contact?.ButtonLabel ?? ""}
                   </a>
                 ) : (
-                  <span>{contact.ButtonLabel}</span>
+                  <span>{contact?.ButtonLabel ?? ""}</span>
                 )}
               </Button>
             </div>

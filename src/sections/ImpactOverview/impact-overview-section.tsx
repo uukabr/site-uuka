@@ -27,9 +27,9 @@ export function ImpactOverviewSection({ impact }: ImpactOverviewSectionProps) {
         <div className="flex flex-col lg:flex-row flex-1 gap-8 lg:gap-12">
           <div className="w-full lg:w-1/2 flex flex-col gap-8">
             <div className="max-w-2xl space-y-2">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold">
                 O que já alcançamos?
-              </h3>
+              </h2>
 
               <p className="mt-2 text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
                 Mentoria de carreira para profissionais negros
@@ -87,13 +87,13 @@ export function ImpactOverviewSection({ impact }: ImpactOverviewSectionProps) {
           </div>
 
           <div className="flex w-full lg:w-1/2 lg:items-center justify-center">
-            {map ? (
+            {map?.url ? (
               <div className="w-full max-w-[550px]">
                 <Image
                   src={map.url}
-                  alt={map.alternativeText || map.name}
-                  width={map.width}
-                  height={map.height}
+                  alt={map?.alternativeText || map?.name || "Mapa de impacto"}
+                  width={map?.width ?? 550}
+                  height={map?.height ?? 400}
                   className="w-full h-auto object-contain"
                 />
               </div>
@@ -108,6 +108,7 @@ export function ImpactOverviewSection({ impact }: ImpactOverviewSectionProps) {
         <div className="flex justify-start">
           <h2
             className={`${instrumentSans.className} text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-[#F59F23] whitespace-nowrap`}
+            aria-label="Seção Uuka em números"
           >
             Uuka em números
           </h2>

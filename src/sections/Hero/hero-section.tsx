@@ -46,24 +46,27 @@ export function HeroSection({ items }: HeroSectionProps) {
               const alt = image?.alternativeText || image?.name || "Imagem";
               const overlayText = item.overlayText;
 
+              const isFirstImage = item.id === items[0].id;
+
               return (
                 <CarouselItem key={item.id} className="pl-0">
                   <div className="relative w-full">
                     <Image
                       src={imageUrl}
                       alt={alt}
-                      width={image.width}
-                      height={image.height}
-                      priority={item.id === items[0].id}
+                      width={image?.width ?? 1920}
+                      height={image?.height ?? 1080}
+                      priority={isFirstImage}
+                      quality={100}
                       className="w-full h-auto object-cover"
                       style={{ objectPosition: "top" }}
                     />
 
                     {overlayText && (
                       <div className="absolute bottom-2 md:top-96 lg:top-1/2 left-4 right-4 text-white p-4 rounded-lg max-w-full md:max-w-md">
-                        <h3 className="text-xs md:text-2xl 2xl:text-3xl leading-snug whitespace-pre-line">
+                        <h1 className="text-xs md:text-2xl 2xl:text-3xl leading-snug whitespace-pre-line">
                           {overlayText}
-                        </h3>
+                        </h1>
                       </div>
                     )}
                   </div>

@@ -15,6 +15,7 @@ import { VirtuousCycleLeadershipSection } from "@/sections/VirtuousCycleLeadersh
 import { ApiResponse } from "@/types/strapi";
 import { ErrorMessage } from "@/utils/error-message";
 import ScrollToTopButton from "@/utils/scroll-to-top-button";
+import { Metadata } from "next";
 
 type LandingPageData = ApiResponse["data"] | null;
 
@@ -22,7 +23,6 @@ async function fetchLandingPage(): Promise<LandingPageData> {
   const params = new URLSearchParams({
     "populate[Header]": "*",
     "populate[About][populate][imageHero][populate]": "image",
-    "populate[About][populate][MissionVisionValues][populate]": "image",
     "populate[About][populate][Schedule]": "*",
     "populate[About][populate][impact][populate]": "*",
     "populate[Testimonials][populate]": "*",
@@ -40,6 +40,14 @@ async function fetchLandingPage(): Promise<LandingPageData> {
     return null;
   }
 }
+
+export const metadata: Metadata = {
+  title: "UUKA",
+  openGraph: {
+    title: "UUKA",
+    type: "website",
+  },
+};
 
 export default async function Home() {
   const landingPage = await fetchLandingPage();
