@@ -12,7 +12,10 @@ export function MethodologySection() {
         <div className="flex-1 flex items-center justify-center">
           <div className="max-w-sm md:max-w-md flex flex-col items-center text-center gap-4">
             <div className="gap-2">
-              <div className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold" aria-label="100 por cento">
+              <div
+                className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold"
+                aria-label="100 por cento"
+              >
                 <PercentageCounter to={100} />
               </div>
 
