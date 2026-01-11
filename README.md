@@ -1,6 +1,6 @@
 # Site UUKA
 
-Site institucional da UUKA, uma plataforma que impulsiona e empodera pessoas negras a serem protagonistas de suas carreiras, ocupando lugares de destaque.
+Site institucional da UUKA.
 
 ## 🚀 Sobre o Projeto
 
