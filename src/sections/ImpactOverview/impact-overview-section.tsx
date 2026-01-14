@@ -42,7 +42,7 @@ export function ImpactOverviewSection({ impact }: ImpactOverviewSectionProps) {
                   className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1] font-bold"
                 />
                 <p className="mt-2 text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
-                  pessoas mentoras capacitadas gratuitamente pela Uuka.
+                  pessoas associadas.
                 </p>
               </div>
 
@@ -53,10 +53,7 @@ export function ImpactOverviewSection({ impact }: ImpactOverviewSectionProps) {
                   className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1] font-bold"
                 />
                 <p className="mt-2 text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
-                  pessoas mentoradas no{" "}
-                  <span className="font-semibold">
-                    ciclo {impact?.currentCycleNumber ?? ""}
-                  </span>
+                  pessoas mentoradas.
                 </p>
               </div>
 
