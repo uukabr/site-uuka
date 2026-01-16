@@ -286,7 +286,7 @@ export default function MobileMenu({ header }: MobileMenuProps) {
             </div>
 
             {/* Menu Mobile */}
-            <div className="fixed bottom-4 left-0 min-w-1/2 p-6 bg-black border-t border-[#F59F23]/20 z-50">
+            <div className="fixed bottom-4 left-0 min-w-[320px] p-6 bg-black z-50">
               <Button
                 asChild
                 className="rounded-xl bg-[#F59F23] text-black px-3 md:px-4 py-2 hover:bg-[#F9c57b] transition text-xs md:text-sm font-bold whitespace-nowrap w-full"
