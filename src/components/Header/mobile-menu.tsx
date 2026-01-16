@@ -74,7 +74,7 @@ export default function MobileMenu({ header }: MobileMenuProps) {
           </div>
 
           {/* Links do Menu Mobile */}
-          <nav className="flex-1 overflow-y-auto p-4 custom-scrollbar">
+          <nav className="flex-1 overflow-y-auto p-4  custom-scrollbar">
             <div className="space-y-2">
               {/* Somos */}
               <Collapsible open={isAboutOpen} onOpenChange={setIsAboutOpen}>
@@ -284,23 +284,23 @@ export default function MobileMenu({ header }: MobileMenuProps) {
                 Contatos
               </a>
             </div>
-          </nav>
 
-          {/* Menu Mobile */}
-          <div className="p-4 border-t border-[#F59F23]/20">
-            <Button
-              asChild
-              className="rounded-xl bg-[#F59F23] text-black px-3 md:px-4 py-2 hover:bg-[#F9c57b] transition text-xs md:text-sm font-bold whitespace-nowrap w-full"
-            >
-              {header?.ButtonLink ? (
-                <a href={header?.ButtonLink} target="_blank" rel="noreferrer">
-                  {header?.ButtonLabel}
-                </a>
-              ) : (
-                <span>{header?.ButtonLabel}</span>
-              )}
-            </Button>
-          </div>
+            {/* Menu Mobile */}
+            <div className="fixed bottom-4 left-0 w-full p-6 bg-black border-t border-[#F59F23]/20 z-50">
+              <Button
+                asChild
+                className="rounded-xl bg-[#F59F23] text-black px-3 md:px-4 py-2 hover:bg-[#F9c57b] transition text-xs md:text-sm font-bold whitespace-nowrap w-full"
+              >
+                {header?.ButtonLink ? (
+                  <a href={header?.ButtonLink} target="_blank" rel="noreferrer">
+                    {header?.ButtonLabel}
+                  </a>
+                ) : (
+                  <span>{header?.ButtonLabel}</span>
+                )}
+              </Button>
+            </div>
+          </nav>
         </div>
       </SheetContent>
     </Sheet>
