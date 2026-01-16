@@ -6,9 +6,12 @@ import { Metadata } from "next";
 import { Suspense } from "react";
 import { HomeContent } from "./_components/home-content";
 
-type LandingPageData = ApiResponse["data"] | null;
+type LandingPageResult = {
+  landingPage: ApiResponse["data"] | null;
+  error?: string;
+};
 
-async function fetchLandingPage(): Promise<LandingPageData> {
+async function fetchLandingPage(): Promise<LandingPageResult> {
   const params = new URLSearchParams({
     "populate[Header]": "*",
     "populate[About][populate][imageHero][populate]": "image",
@@ -21,13 +24,11 @@ async function fetchLandingPage(): Promise<LandingPageData> {
     "populate[Leadership][populate][LeadershipCard][populate]": "photo",
   });
 
-  try {
-    const data = await strapiFetch<ApiResponse>("landing-page", params);
-    return data?.data ?? null;
-  } catch (error) {
-    console.error("Erro ao buscar dados da API:", error);
-    return null;
-  }
+  const { data, error } = await strapiFetch<ApiResponse>(
+    "landing-page",
+    params
+  );
+  return { landingPage: data?.data ?? null, error };
 }
 
 export const metadata: Metadata = {
@@ -39,14 +40,24 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
-  const landingPage = await fetchLandingPage();
+  const { landingPage, error } = await fetchLandingPage();
 
   if (!landingPage) {
     return (
       <div className="p-6">
         <ErrorMessage
           title="Ops! Algo deu errado."
-          message="Não foi possível carregar os dados da página. Tente novamente mais tarde."
+          message={
+            <>
+              Não foi possível carregar os dados da página no momento. Por
+              favor, tente novamente mais tarde.
+              <br />
+              Se o problema persistir, entre em contato.
+              <br />
+              <br />
+              {error ? ` (${error})` : ""}
+            </>
+          }
         />
       </div>
     );
