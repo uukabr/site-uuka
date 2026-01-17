@@ -7,7 +7,7 @@ export async function strapiFetch<T>(
   try {
     const res = await fetch(url, {
       headers: { Authorization: `Bearer ${process.env.STRAPI_TOKEN}` },
-      cache: "default",
+      cache: "reload",
     });
 
     if (!res.ok) {
