@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["supportive-oasis-960fc14187.media.strapiapp.com"],
+    domains: ["useful-baseball-657fcd5d5a.media.strapiapp.com"],
     qualities: [100],
   },
   devIndicators: false,
